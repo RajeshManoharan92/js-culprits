@@ -1,0 +1,252 @@
+1.Fix the code to get the largest of three.
+
+aa = (f,s,t) => {
+ 
+ console.log(f,s,t);
+ if(f>s &&f>t){
+ console.log(f)}
+ else if(s>f && s>t){
+ console.log(s)}
+ else{
+ console.log(t)}
+}
+aa(1,2,3);
+
+Explanation : fst already declared so it should not be declared again
+
+
+------------------------------------------------
+2. Fix the code to Sum of the digits present in the number
+
+let n = [1,2,3];
+
+function add(n)
+{
+var sum  = 0;
+for(var i=0;i<n.length;i++){
+ sum+=n[i]
+ }
+ return sum;
+}
+
+console.log(add(n));
+
+Explanation : first thing is to declare n in array format & next thing is to set the initial value of sum = 0;
+
+
+----------------------------------------------------------
+3. Fix the code to gen Title caps.
+
+
+var arr = ['guvi', 'geek', 'zen', 'fullstack'];
+var ano = function(arr) {
+ for (var i = 0; i <= arr.length; i++) {
+ console.log(arr[i][0].toUpperCase() + arr[i].substr(1));
+ }
+}
+ano(arr);
+
+Explanation: have to send arr as params to function
+
+-----------------------------------------------------------
+4. Fix the code to sum the number in that array
+
+const num = [10, 20, 30, 40,50,60,70,80,90,100] 
+
+var result = num.reduce((acc,ele)=>{
+
+return acc+ele
+
+})
+console.log(result)
+
+
+Explanation: Reduce function is to be complete to get code work as mentioned above
+
+------------------------------------------------------------
+5. Fix the code to gen Title caps.
+
+var arr = ['guvi', 'geek', 'zen', 'fullstack'];
+(function() {
+ for (var i = 0; i <= arr.length; i++) {
+ console.log(arr[i][0].toUpperCase() + arr[i].substr(1));
+ }
+})();
+
+
+Explanation : first array element should be quotes and next arr[i][0] not arr[0][i]
+
+
+------------------------------------------------------------
+6.print all odd numbers in an array using IIFE function
+
+var arr = [1, 2, 3, 5, 7, 79, 7, 2, 6, 9, 4];
+(function() {
+ for (var i = 0; i < arr.length; i++) {
+ if (arr[i] % 2 !== 0) {
+ console.log(arr[i]);
+ }}
+})();
+
+Explanation : since to print odd numbers in if condition it should br !== which means not equal to zero
+
+------------------------------------------------------------
+7. Fix the code to reverse.
+
+(function(str){
+ str1 = str.split('').reverse().join("");
+ console.log(str1); 
+})('abcd')
+
+
+Explanation: since in params there is no space between 'abcd' so split function must be used without space between split('')
+
+--------------------------------------------------------------
+
+8. Sum of odd numbers in an array
+
+var as=[12,34,5,6,2,56,6,2,1];
+var oddarr = []; 
+var s=as.reduce((accumulator,ele)=>{
+ if(ele % 2 != 0)
+ {
+
+oddarr.push(ele)
+ }
+ },0);
+ 
+ var res = oddarr.reduce((a,c)=>{
+ return a+c
+ })
+console.log(res);
+
+Explanation: First odd numbers are pushed on array oddarr and then by using another reduce function summing the rest values in arrays.
+-------------------------------------------------------------
+9. Fix the code to Sum of all numbers using IIFE function
+
+const arr = [9,8,5,6,4,3,2,1];
+(function() {
+ var sum = 0;
+ for (var i = 0; i < arr.length; i++){
+ sum += arr[i];
+ }
+ console.log(sum);
+ return sum;
+})();
+
+
+Explanation: in for loop termination (;) should not be done before it ends and
+ since consoling sum outside of for loop it should in var datatype
+
+------------------------------------------------------------
+10. Fix the code to remove duplicates.
+
+
+ newArr = [];
+var res = function(arr){
+for(var i=0; i < arr.length; i++){
+
+ if(newArr.indexOf(arr[i]) == -1) {
+
+ newArr.push(arr[i]);
+ } }
+ console.log(newArr)
+
+}
+res(['guvi','geek','guvi','duplicated','geeK'])
+
+Explanation: newArr must be declared outside for loop
+
+
+-------------------------------------------------------------
+11. Swap the odd and even digits:
+
+aa = data=>{
+ var a=data;
+ var arr1 = [];
+  var arr2 = [];
+ 
+for(i=0;i<a.length-1;i++){
+ 
+ var s=a[i+1]
+ var b=a[i]
+ arr1.push(s)
+  arr2.push(b)
+ i=i+1
+}
+
+console.log(arr1.concat(arr2));
+}
+aa('1234');
+
+Explanation: to swap odd and even numbers array1 (arr1) and array (arr2) has beeb declared and values push in it and merged two arrays using concat function.
+
+-------------------------------------------------------
+12. Fix the code to give the below output:
+
+Expected Output:
+
+[
+{firstName: “Vasanth”, lastName: “Raja”, age: 24, role: “JSWizard”},
+{firstName: “Sri”, lastName: “Devi”, age: 28, role: “Coder”}
+]
+
+
+var array =[[['firstname','vasanth'],['lastname','Raje'],['age',24],['role','JSWizard']],[['firstname','Sri'],['lastname','Devi'],['age',28],['role', 'Coder']]];
+
+var final=[]
+while(array.length!=0)
+{
+ var outer_remove = array.shift();
+ 
+ while(outer_remove.length!=0)
+ {
+ var inner_remove = outer_remove.shift()
+ var key = inner_remove[0]
+ var value =inner_remove[1]
+ var new_object ={}
+ new_object[key]=value
+ final.push(new_object)
+ }
+ 
+}
+
+console.log(final)
+
+Explanation: since new_object is not declared, it should be declared and push function must be used inside secound for loop to push element during every iteration.
+
+-----------------------------------------------------
+13. Fix the code to rotate an array by k times and return rotated array using IIFE function
+
+var arr = [1, 2, 3, 6, 8, 6, 1, 9, 10, 12, 13];
+var k = 3;
+(function() {
+ out = arr.slice(k, arr.length);
+ var count = out.length;
+ for (var i = 0; i < k; i++) {
+ out[count] = arr[i];
+ count += 1;
+ }
+ console.log(out);})();
+
+Explanation: arr = {} need not be declared since its not used
+
+-----------------------------------------------------------
+14. Fix the code to return the Prime numbers
+
+const newArray=[1,3,2,5,10];
+const myPrime=newArray.filter(num=>{
+
+ for(let i=2;i<num;i++){
+
+ if(num%i==0)
+ {
+ return false;
+ }
+ }
+ return num !=1;
+});console.log(myPrime);
+
+Explanation: if number's remainder is 0 it should return false its not prime number
+
+-----------------------------------------------------------

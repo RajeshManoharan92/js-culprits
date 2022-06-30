@@ -1,0 +1,340 @@
+1. Find the culprit
+
+ <!DOCTYPE html>
+<html>
+<body>
+ <script>
+ alert( “I’m JavaScript!’);  // correct one is -> alert( "I'm Javascript!");
+ </script>
+ Whats the error in this ? -> message should be in double quotes
+</body>
+</html>
+
+----------------------------------------------------------
+
+2. Find the culprit and invoke the alert
+
+ <!DOCTYPE html>
+<html>
+<body>
+ <script src="script.js"></script>
+</body>
+</html>
+
+scripts.js // in source it given as script.js instead of scripts.js
+
+alert(“I’m invoked!”);
+
+------------------------------------------------------------
+
+3. Explain the below how it works 
+
+<!DOCTYPE html>
+<html>
+<body>
+ <script src=”script.js”></script>
+</body>
+</html>
+
+alert("I'm JavaScript!");
+alert('Hello') // this line is not having semicolon
+alert(`Wor
+ ld`)
+alert(3 +
+1
++ 2); // this is multiple line code and its working
+
+
+Explanation:
+In javascript semicolon is not mandatory one
+4th one having multiple lines but all in single brackets so it adding each numbers and displaying it
+
+
+------------------------------------------------------------
+
+4. Fix the below to alert Guvi geek 
+
+<!DOCTYPE html>
+<html>
+<body>
+ <script src=”script.js”></script>
+</body>
+</html>
+
+
+let admin=9, fname=10.5; 
+fname = "Guvi";
+lname = "geek"
+admin = fname+" "+lname; // (for adding space included +" "+)
+alert( admin ); // "Guvi geek"
+
+
+-----------------------------------------------------------
+
+5. Fix the below to alert hello Guvi geek 
+
+let fname=10.5; 
+fname = "Guvi";
+lname = "geek"
+let name = fname+lname;
+alert( `hello ${name}` ); // instead of colon use tild symbol to work
+
+-----------------------------------------------------------
+
+6. Fix the below to alert sum of two numbers
+
+ let a = prompt("First number?");
+let b = prompt("Second number?");
+let c = (parseInt(a))+(parseInt(b)) // have to convert string to integer to add so used parseInt to convert
+alert(c);
+
+------------------------------------------------------------
+
+7. If you run the below scritpt you will get “Code is Blasted”
+
+Explain Why the Code is blasted and how to diffuse it and get “Diffused”.
+
+var a = "2" > "12";
+//Don't touch below this
+if (a) {
+  console.log("Code is Blasted")
+}
+else
+{
+  console.log("Diffused") 
+}
+
+Explanation:
+
+since "2" and "12" are in string format if condition works and code is Blasted
+
+if 2 and 12 are in integer format else condition works since 2 is not greater than 12 so code get Diffused
+
+-------------------------------------------------------------
+
+8. How to get the success in console.
+
+ let a = prompt("Enter a number?");
+//Don't modify any code below this
+if (a) {
+ console.log( 'OMG it works for any number inc 0' );
+}
+else
+{
+ console.log( "Success" );
+}
+
+
+Explanation : By leaving input filed we can print success
+
+-------------------------------------------------------------------
+
+9. How to get the correct score in console.
+
+let value = prompt('How many runs you scored in this ball');
+if (value === 4) {
+      console.log("You hit a Four");
+} else if (value === 6) {
+      console.log("You hit a Six");
+} else {
+      console.log("I couldn't figure out");
+}
+
+corrected syntax:
+
+let value = prompt('How many runs you scored in this ball');
+let intvalue = parseInt(value)
+if (intvalue === 4) {
+      console.log("You hit a Four");
+} else if (intvalue === 6) {
+      console.log("You hit a Six");
+} else {
+      console.log("I couldn't figure out");
+}
+
+Explanation 
+1. have to convert string to integer so we can use parseInt to convert then as follows
+2. if u enter 4 in input field in console it will display as You hit a Four
+3. if u enter 6 in input field in console it will display as You hit a six
+4. Other than above number any other number will display I couldn't figure out in console
+
+
+----------------------------------------------------------------- 
+10. Fix the code to welcome the Employee
+
+ let login = 'Employee';
+let message = (login == 'Employee') ? :
+  (login == 'Director') ? 'Greetings' :
+  (login == '') ? 'No login' :
+  '';
+console.log(message);
+
+
+corrected syntax:
+
+let login = 'Employee';
+let message = (login == 'Employee') ? "welcome Employee" :
+  (login == 'Director') ? 'Greetings' :
+  (login == '') ? 'No login' :
+  '';
+console.log(message);
+
+-------------------------------------------------------------
+11 . Fix the code to welcome the boss
+
+
+var message ;
+if (null || 2 || undefined )
+{
+ 
+ var message = "welcome boss"
+}
+else
+{
+ var message = "Go away";
+}
+  console.log(message);
+
+
+Explanation: Message must be declared in global scope var
+
+----------------------------------------------------------
+12. Fix the code to welcome the boss
+
+let message;
+let lock = 0;
+//Dont change any code below this 
+if (null || lock || undefined )
+{
+  message = "Go away";
+}
+else
+{
+ message = "welcome";
+}
+  console.log(message);
+
+Explanation: since if condition fails when lock remain 0 so code go to else part and welcome msg printed
+
+------------------------------------------------------
+13 . Fix the code to welcome the boss
+
+// You cant change the value of the msg
+let message;
+let lock = 0;
+//Dont change any code below this
+if (lock && " " || undefined )
+{
+  message = "Go away";
+}
+else
+{
+ message = "welcome";
+}
+console.log(message);
+
+Explanation: since in if condtion lock must not be in null or undefined it can be declared zero to print welcome
+
+---------------------------------------------------
+14. Change the code to print
+
+3
+
+2
+
+1
+
+
+let i = 3;
+while (i) {
+  console.log( i-- );
+}
+
+Explanation: Decrementation must be added after i--
+
+------------------------------------------------
+15. Change the code to print 1 to 10 in 4 lines
+
+let num = 1
+console.log(num,num += 1 , num += 1)
+console.log(num += 1 , num += 1,num += 1)
+console.log(num += 1 , num += 1,num += 1)
+console.log(num += 1)
+
+Explanation: since code to be printed in 4 lines above changes are made
+
+---------------------------------------------------
+16. Change the code to print even numbers
+
+for (let num = 2; num <= 20; num += 2) {
+  console.log(num)
+}
+
+
+Explanation: in for loop num +=2 will add +2 in every iteration so only even numbers will be printed
+
+-------------------------------------------------------------------
+17. Change the code to print all the gifts
+
+let gifts = ["teddy bear", "drone", "doll"];
+for (let i = 0; i < gifts.length; i++) {
+  console.log(`Wrapped ${gifts[i]} and added a bow!`);
+}
+
+Explanation: For loop must be iterated through array length and in console it should be in tild symbol ``
+
+-------------------------------------------------------------------
+18. Fix the code to disarm the bomb.
+
+let countdown = 100;
+while (countdown > 1) {
+  countdown--;
+console.log(countdown)
+  if(countdown == 0)
+  {
+   console.log("bomb triggered");
+  }
+}
+
+Explanation: since bomb is triggered only when countdown on 0, by changing countdown greater than 1 lead to countdown will not be zero so bomb ill not get triggered.
+
+---------------------------------------------------------------------
+19. Whats the msg printed and why?
+
+var lemein = '0';
+var lemeout = 0;
+var msg = '';
+if (lemein) {
+ msg += 'hi';
+ }
+if (lemeout) {
+ msg += 'Hello';
+}
+console.log(msg);
+
+Explanation: hi msg will be printed since lemein value is a string so if condition check true and its msg getted printed, where as lemeout value is zero so its if condition false.
+
+-----------------------------------------------------------------------
+20. Whats the msg printed and why? Guess you answer before running it.
+
+var lemein = '0';
+var lemeout = 0;
+var msg = '';
+if (lemein) {
+ msg += 'hi';
+ }
+if (lemeout) {
+ msg += 'Hello';
+}
+console.log(msg);
+
+Explanation: hi msg will be printed since lemein value is a string so if condition check true and its msg getted printed, where as lemeout value is zero so its if condition false.
+
+
+
+
+
+
+
+
+

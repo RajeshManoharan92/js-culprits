@@ -1,0 +1,239 @@
+1. Write a code to print the numbers in the array
+
+Output: 1234567891011
+
+var numsArr = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+var new_string = '';
+ 
+for (var i = 0; i < numsArr.length; i++) {
+ new_string += numsArr[i] 
+}
+console.log(new_string);
+
+
+Explanation: In for loop iteration must start from 0 then it should be numArr.length then i++
+
+-------------------------------------------------------------------------
+2. Write a code to print the numbers in the array
+
+Output: 1,2,3,4,5,6,7,8,9,10,11
+
+var numsArr = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+var new_string = '';
+ 
+for (var i = 0; i < numsArr.length; i++) {
+ new_string += numsArr[i] + ','
+}
+console.log(new_string);
+
+
+Explanation: comma is to be added inside quotes
+
+-------------------------------------------------------------------------
+3. Write a code to print from last to first with spaces (Make sure there is no space after the last element 1)
+
+Output: 11 10 9 8 7 6 5 4 3 2 1
+
+
+var new_string = "";
+ 
+for (var i = 11; i > 0; i-- ) {
+ new_string += i + " "
+}
+console.log(new_string.trim());
+
+Explanation: In for loop i-- has to be added to print in descending order 
+and to avoid white space add trim() to avoid white space
+
+------------------------------------------------------------------------------
+4. Write a code to replace the array value — If the number is even, replace it with ‘even’.
+
+var numsArr = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+for (var i = 0; i <=numsArr.length; i++) {
+ if(numsArr[i] %2 == 0 )
+ {
+ numsArr[i] = 'even'
+ }
+}
+console.log(numsArr);
+
+Explanation: In for loop it should be iterate through numsArr.length 
+and in if loop asigning value must be in string 'even'
+
+---------------------------------------------------------------------------------
+5. Write a code to replace the array value — If the index is even, replace it with ‘even’.
+
+Output: [ “even”, 2, “even”, 4, “even”, 6, “even”, 8, “even”, 10, … ]
+
+var numsArr = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+for (var i = 0; i <=10; i++) {
+ if(numsArr[i] %2 !== 0 )
+ {
+ numsArr[i] = 'even'
+ }
+}
+console.log(numsArr);
+
+Explanation: since even should be replace in odd index in if condition modulus value should not be zero
+
+-------------------------------------------------------------------------------
+6. Write a code to add all the numbers in the array
+
+Output: 66
+
+var numsArr = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+
+var sum=0;
+
+for (var i = 0; i <numsArr.length; i++) {
+ 
+ sum += numsArr[i]
+}
+console.log(sum);
+
+
+Explanation: sum must be declared outside for loop to store added value 
+and for loop must be iterate through arrray declare numsArr
+
+
+-----------------------------------------------------------------------------
+7. Write a code to add the even numbers only
+Output: 30
+
+var numsArr = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+var sum = 0;
+for (var i = 0; i < numsArr.length; i++) {
+ if(numsArr[i]%2==0){
+ sum += numsArr[i]
+ }
+ 
+}
+console.log(sum);
+
+Explanation: for loop must iterate till array.length to get all even numbers to add.
+
+-----------------------------------------------------------------------------
+8. Write a code to add the even numbers and subract the odd numbers
+Output: 94
+
+
+var numsArr = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+var sum=100;
+var sub = 0;
+for (var i = 0; i <numsArr.length; i++) {
+ if(numsArr[i]%2==0){
+ sum += numsArr[i]
+ }
+ else {
+ sub -= numsArr[i]
+ }
+ 
+}
+
+console.log(sum+sub);
+
+Explanation: In for loop iteration must be done in declared array numArr
+and in if condition since it should add even numbers condition must be == 0
+and additional variable like sub must be declared to store the subtracted value.
+
+--------------------------------------------------------------------------------
+9. Write a code to print inner arrays
+
+var numsArr = [[1, 2, 3, 4, 5],[ 6, 7, 8, 9, 10, 11]];
+for (var i = 0; i < numsArr.length; i++) {
+ console.log( numsArr[i])
+}
+
+Explanation :  nested arrays must be decalred by separting with commas
+ and for loop should not be terminated(;) before ends
+
+------------------------------------------------------------------------------
+10. Write a code to print elements in the inner arrays
+
+var numsArr = [[1, 2, 3, 4, 5],[ 6, 7, 8, 9, 10, 11]];
+
+for (var i = 0; i < numsArr.length; i++) {
+ var inner_array = numsArr[i];
+ 
+ for(var j = 0 ; j < inner_array.length;j++ ){
+
+     console.log(inner_array[j])
+     
+     }
+}
+
+
+Explanation: in secound for loop it must be j++ and since looping many elements it cant store in string as mentioned earlier
+
+------------------------------------------------------------------------------
+11. Write a code to replace the array value — If the index is even, replace it with ‘even’.
+
+var numsArr = [[1, 2, 3, 4, 5],[ 6, 7, 8, 9, 10, 11]];
+
+for (var i = 0; i < numsArr.length; i++) {
+ var inner_array = numsArr[i];
+ for(var j = 0 ; j < inner_array.length;j++ )
+      if(numsArr[i][j] %2 !== 0 )
+      {
+         numsArr[i][j] = 'even'
+       }
+}
+console.log(numsArr);
+
+Explanation: In secound for loop it must be j++ then in if condition numsArr[i][j] %2 !==0 it must be not equal to 0 since we adding in even index
+
+--------------------------------------------------------------------------------
+12. Write a code to print elements in the inner arrays in reverse
+
+var numsArr = [[1, 2, 3, 4, 5],[ 6, 7, 8, 9, 10, 11]];
+
+for (var i = numsArr.length-1 ; i >=0  ; i--) {
+ var inner_array = numsArr[i];
+
+for(var j = inner_array.length-1; j >=0 ;j--){
+ console.log(inner_array[j])}
+}
+
+Explanation: if first for loop iteration should start from array length and ends with 0 and in secound for loop also repeat the same to reverse array
+
+----------------------------------------------------------------------------
+13. Write a code to add elements in the inner arrays based on odd or even values
+Output:
+36
+30
+
+var numsArr = [[1, 2, 3, 4, 5],[ 6, 7, 8, 9, 10, 11]];
+var sum_odd=0;
+var sum_even=0;
+for (var i = 0; i < numsArr.length; i++) {
+ var inner_array = numsArr[i];
+ for(var j = 0 ; j < inner_array.length;j++ ){
+ if(numsArr[i][j]%2!==0)
+ {
+ sum_odd += numsArr[i][j]
+ }
+ else
+ {
+ sum_even += numsArr[i][j]
+ }
+}
+}
+console.log(sum_odd);
+console.log(sum_even);
+
+Explanation: In if loop since it iteration through j loop numsArr[i][j] must be included 
+
+----------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
